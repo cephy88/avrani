@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions</title>
+</head>
+<body>
+    <h1>Predictions</h1>
+    <table border="1">
+        <tr>
+            <th>Input</th>
+            <th>Predicted Label</th>
+            <th>Probability</th>
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td>{{ result.input }}</td>
+            <td>{{ result.predicted_label }}</td>
+            <td>{{ result.probability }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('download_predictions') }}">Download Predictions CSV</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Upload Class Data</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-3">Upload Class Data</h1>
+        <form action="{{ url_for('upload_class_data') }}" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="json_file" class="form-label">JSON File (ZIP)</label>
+                <input type="file" class="form-control" id="json_file" name="json_file" accept=".zip">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
